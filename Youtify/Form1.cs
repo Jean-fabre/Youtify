@@ -53,7 +53,7 @@ namespace Youtify
             request.AddParameter("client_secret", "c8d69a6285814811bc2d5a5e67431e41");
 
             IRestResponse response = client.Execute(request);
-            Console.WriteLine(response.Content.ToString());
+            Console.WriteLine(response.Content.ToString()); 
 
             JavaScriptSerializer ser = new JavaScriptSerializer();
             Spotify_Token token = ser.Deserialize<Spotify_Token>(response.Content);
